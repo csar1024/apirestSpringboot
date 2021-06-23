@@ -27,7 +27,6 @@ import com.bolsadeideas.springboot.vehicle.apirest.models.services.IVMTCountySer
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -125,7 +124,7 @@ public class TraveledRestController {
 		return ResponseEntity.status(HttpStatus.OK).body(countyServices.modify(county));
 	}
 
-	@Operation(summary = "Modifica un state y existente")
+	@Operation(summary = "Modifica un state ya existente")
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Resgistro Modificado", content = {
 					@Content(mediaType = "application/json", schema = @Schema(implementation = State.class)) }),

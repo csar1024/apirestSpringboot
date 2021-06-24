@@ -29,9 +29,9 @@ services:
       - MYSQL_PASSWORD=prueba1
       - MYSQL_DATABASE=apirest
     volumes:
-      - mysql_data:/var/lib/mysql
-      - mysql_config:/etc/mysql/conf.d
+      - mysql_data_persistent:/var/lib/mysql
+      - mysql_config_configuration:/etc/mysql/conf.d
       
 volumes:
-  mysql_data:
-  mysql_config:    
+  mysql_data_persistent:
+  mysql_config_configuration:    
